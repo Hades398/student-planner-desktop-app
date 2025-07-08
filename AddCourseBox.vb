@@ -15,22 +15,16 @@
             .Cursor = Cursors.Hand
         }
 
-        Dim name As New Label With {
+        CourseName = New Label With {
                     .Text = txtCourseName.Text
                 }
 
 
-        CoursePanel.Controls.Add(name)
+        CoursePanel.Controls.Add(CourseName)
 
-        AddHandler CoursePanel.Click, AddressOf CoursePanel_Click
 
         Me.DialogResult = DialogResult.OK
         Me.Close()
-    End Sub
-
-    Private Sub CoursePanel_Click(sender As Object, e As EventArgs)
-        Dim clickedPanel As Panel = DirectCast(sender, Panel)
-        MessageBox.Show("You clicked the course panel: " & clickedPanel.Controls(0).Text)
     End Sub
 
 End Class
