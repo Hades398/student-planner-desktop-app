@@ -22,28 +22,29 @@ Partial Class AddCourseBox
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Me.TextBox1 = New System.Windows.Forms.TextBox()
-        Me.TextBox2 = New System.Windows.Forms.TextBox()
+        Me.txtCourseName = New System.Windows.Forms.TextBox()
+        Me.txtCourseTimes = New System.Windows.Forms.TextBox()
         Me.CourseName = New System.Windows.Forms.Label()
         Me.CourseDates = New System.Windows.Forms.Label()
-        Me.Button1 = New System.Windows.Forms.Button()
+        Me.btnSave = New System.Windows.Forms.Button()
+        Me.PrintDialog1 = New System.Windows.Forms.PrintDialog()
         Me.SuspendLayout()
         '
-        'TextBox1
+        'txtCourseName
         '
-        Me.TextBox1.Location = New System.Drawing.Point(12, 56)
-        Me.TextBox1.Multiline = True
-        Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(212, 89)
-        Me.TextBox1.TabIndex = 0
+        Me.txtCourseName.Location = New System.Drawing.Point(12, 56)
+        Me.txtCourseName.Multiline = True
+        Me.txtCourseName.Name = "txtCourseName"
+        Me.txtCourseName.Size = New System.Drawing.Size(212, 89)
+        Me.txtCourseName.TabIndex = 0
         '
-        'TextBox2
+        'txtCourseTimes
         '
-        Me.TextBox2.Location = New System.Drawing.Point(576, 56)
-        Me.TextBox2.Multiline = True
-        Me.TextBox2.Name = "TextBox2"
-        Me.TextBox2.Size = New System.Drawing.Size(212, 89)
-        Me.TextBox2.TabIndex = 1
+        Me.txtCourseTimes.Location = New System.Drawing.Point(576, 56)
+        Me.txtCourseTimes.Multiline = True
+        Me.txtCourseTimes.Name = "txtCourseTimes"
+        Me.txtCourseTimes.Size = New System.Drawing.Size(212, 89)
+        Me.txtCourseTimes.TabIndex = 1
         '
         'CourseName
         '
@@ -63,25 +64,29 @@ Partial Class AddCourseBox
         Me.CourseDates.TabIndex = 3
         Me.CourseDates.Text = "Enter Course Dates:"
         '
-        'Button1
+        'btnSave
         '
-        Me.Button1.Location = New System.Drawing.Point(269, 225)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(251, 47)
-        Me.Button1.TabIndex = 4
-        Me.Button1.Text = "Save"
-        Me.Button1.UseVisualStyleBackColor = True
+        Me.btnSave.Location = New System.Drawing.Point(269, 225)
+        Me.btnSave.Name = "btnSave"
+        Me.btnSave.Size = New System.Drawing.Size(251, 47)
+        Me.btnSave.TabIndex = 4
+        Me.btnSave.Text = "Save"
+        Me.btnSave.UseVisualStyleBackColor = True
+        '
+        'PrintDialog1
+        '
+        Me.PrintDialog1.UseEXDialog = True
         '
         'AddCourseBox
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(800, 450)
-        Me.Controls.Add(Me.Button1)
+        Me.Controls.Add(Me.btnSave)
         Me.Controls.Add(Me.CourseDates)
         Me.Controls.Add(Me.CourseName)
-        Me.Controls.Add(Me.TextBox2)
-        Me.Controls.Add(Me.TextBox1)
+        Me.Controls.Add(Me.txtCourseTimes)
+        Me.Controls.Add(Me.txtCourseName)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Name = "AddCourseBox"
         Me.Text = "Course Details"
@@ -90,9 +95,10 @@ Partial Class AddCourseBox
 
     End Sub
 
-    Friend WithEvents TextBox1 As TextBox
-    Friend WithEvents TextBox2 As TextBox
+    Friend WithEvents txtCourseName As TextBox
+    Friend WithEvents txtCourseTimes As TextBox
     Friend WithEvents CourseName As Label
     Friend WithEvents CourseDates As Label
-    Friend WithEvents Button1 As Button
+    Friend WithEvents btnSave As Button
+    Friend WithEvents PrintDialog1 As PrintDialog
 End Class

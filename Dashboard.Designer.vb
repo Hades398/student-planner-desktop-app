@@ -22,40 +22,41 @@ Partial Class Dashboard
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Me.Panel1 = New System.Windows.Forms.Panel()
-        Me.FlowLayoutPanel1 = New System.Windows.Forms.FlowLayoutPanel()
+        Me.pnlHeader = New System.Windows.Forms.Panel()
         Me.btnAddCourse = New System.Windows.Forms.Button()
-        Me.Panel1.SuspendLayout()
+        Me.flowPanelCourses = New System.Windows.Forms.FlowLayoutPanel()
+        Me.pnlHeader.SuspendLayout()
         Me.SuspendLayout()
         '
-        'Panel1
+        'pnlHeader
         '
-        Me.Panel1.BackColor = System.Drawing.Color.WhiteSmoke
-        Me.Panel1.Controls.Add(Me.btnAddCourse)
-        Me.Panel1.Dock = System.Windows.Forms.DockStyle.Top
-        Me.Panel1.Location = New System.Drawing.Point(0, 0)
-        Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(1020, 100)
-        Me.Panel1.TabIndex = 0
-        '
-        'FlowLayoutPanel1
-        '
-        Me.FlowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.FlowLayoutPanel1.Location = New System.Drawing.Point(0, 100)
-        Me.FlowLayoutPanel1.Name = "FlowLayoutPanel1"
-        Me.FlowLayoutPanel1.Size = New System.Drawing.Size(1020, 523)
-        Me.FlowLayoutPanel1.TabIndex = 1
+        Me.pnlHeader.BackColor = System.Drawing.Color.FromArgb(CType(CType(135, Byte), Integer), CType(CType(174, Byte), Integer), CType(CType(115, Byte), Integer))
+        Me.pnlHeader.Controls.Add(Me.btnAddCourse)
+        Me.pnlHeader.Dock = System.Windows.Forms.DockStyle.Top
+        Me.pnlHeader.Location = New System.Drawing.Point(0, 0)
+        Me.pnlHeader.Name = "pnlHeader"
+        Me.pnlHeader.Size = New System.Drawing.Size(1020, 100)
+        Me.pnlHeader.TabIndex = 0
         '
         'btnAddCourse
         '
         Me.btnAddCourse.BackColor = System.Drawing.Color.Honeydew
-        Me.btnAddCourse.Dock = System.Windows.Forms.DockStyle.Left
-        Me.btnAddCourse.Location = New System.Drawing.Point(0, 0)
+        Me.btnAddCourse.FlatAppearance.BorderSize = 0
+        Me.btnAddCourse.Location = New System.Drawing.Point(436, 0)
         Me.btnAddCourse.Name = "btnAddCourse"
         Me.btnAddCourse.Size = New System.Drawing.Size(119, 100)
         Me.btnAddCourse.TabIndex = 0
         Me.btnAddCourse.Text = "Add Course"
         Me.btnAddCourse.UseVisualStyleBackColor = False
+        '
+        'flowPanelCourses
+        '
+        Me.flowPanelCourses.BackColor = System.Drawing.Color.OldLace
+        Me.flowPanelCourses.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.flowPanelCourses.Location = New System.Drawing.Point(0, 100)
+        Me.flowPanelCourses.Name = "flowPanelCourses"
+        Me.flowPanelCourses.Size = New System.Drawing.Size(1020, 523)
+        Me.flowPanelCourses.TabIndex = 1
         '
         'Dashboard
         '
@@ -63,16 +64,16 @@ Partial Class Dashboard
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.White
         Me.ClientSize = New System.Drawing.Size(1020, 623)
-        Me.Controls.Add(Me.FlowLayoutPanel1)
-        Me.Controls.Add(Me.Panel1)
+        Me.Controls.Add(Me.flowPanelCourses)
+        Me.Controls.Add(Me.pnlHeader)
         Me.Name = "Dashboard"
         Me.Text = "DashBoard"
-        Me.Panel1.ResumeLayout(False)
+        Me.pnlHeader.ResumeLayout(False)
         Me.ResumeLayout(False)
 
     End Sub
 
-    Friend WithEvents Panel1 As Panel
+    Friend WithEvents pnlHeader As Panel
     Friend WithEvents btnAddCourse As Button
-    Friend WithEvents FlowLayoutPanel1 As FlowLayoutPanel
+    Friend WithEvents flowPanelCourses As FlowLayoutPanel
 End Class
